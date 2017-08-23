@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>
+            Register your details
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <body>
+        <section>
+            <div class="header-section">
+                <div style="width:70%">
+                    <h2 class="heading">Design World</h2>
+                </div>
+                <div class="login-div">
+                    <div>
+                        User Name<br/>
+                        <input type="text" class="credentials"/>
+                    </div>&nbsp;&nbsp;
+                    <div>
+                        Password<br/>
+                        <input type="password" class="credentials"/><br/>
+                    </div>&nbsp;&nbsp;
+                    <div>
+                        <input type="submit" Value="Login" class="btn btn-default btn-xs" id="login"><br/>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="content">
+                <div class="information-section">
+                    <div class="animated-div">
+                        
+                    </div>                    
+                    <div>
+                        <video src="forest.mp4" autoplay muted width="100%" height="auto" controls/>
+                    </div>
+                </div>
+                <div class="registration-section">
+                    <h3>New User!!! Register here <img src="arrow.gif" alt="Here"/></h3>
+                    <form>
+                        <div class="name-div">
+                            <input type="text" class="form-control" id="firstname" placeholder="First Name" title="First name is mandatory" required>
+                            <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
+                        </div><br/>
+                        <div class="registration-div">
+                            <input type="email" class="form-control" id="emailid" placeholder="Email Id" required>
+                        </div><br/>
+                        <div class="registration-div">
+                            <input type="tel" class="form-control" id="phone" pattern="^[0-9]*$" placeholder="Mobile Number">
+                        </div><br/>
+                        <div class="registration-div">
+                            &nbsp;Birthday
+                            <input type="date" class="form-control" id="dob" required>
+                        </div><br/>
+<!--
+                        <div class="registration-div">
+                            Gender
+                            <label></label><input type="radio" name="gender" value="Male" id="dob">Male</label>
+                            <label></label><input type="radio" name="gender" value="Female" id="dob">Female</label>
+                        </div>
+-->
+<!--
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Birthday</div>
+                            <div class="panel-body">
+                                <input type="date" class="form-control" id="dob">
+                            </div>
+                        </div>
+-->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Gender</div>
+                            <div class="panel-body">
+                                <label></label><input type="radio" name="gender" value="Male" id="m" checked>Male</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label></label><input type="radio" name="gender" value="Female" id="f">Female</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label></label><input type="radio" name="gender" value="Transgender" id="tg">Transgender</label>
+                            </div>
+                        </div>
+                        <div class="registration-div">
+                            <input type="submit" Value="Register" class="form-control btn-primary" id="submit"><br/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </section>
+        
+    </body>
+</html>
