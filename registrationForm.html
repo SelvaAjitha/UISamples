@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <title>
+            Register your details
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <link rel="stylesheet" href="style.css">
+    
+    <body>
+        <header>
+            <div class="header-section">
+                <div style="width:70%">
+                    <h2 class="heading">Design World</h2>
+                </div>
+                <div class="login-details">
+                    <div>
+                        User Name<br/>
+                        <input type="text" class="credentials"/>
+                    </div>&nbsp;&nbsp;
+                    <div>
+                        Password<br/>
+                        <input type="password" class="credentials"/><br/>
+                    </div>&nbsp;&nbsp;
+                    <div>
+                        <input type="submit" Value="Login" class="btn btn-default btn-xs" id="login"><br/>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="information-section">
+                    <div class="animated-div">
+                        
+                    </div>                    
+                    <div>
+                        <video src="forest.mp4" autoplay muted width="100%" height="auto" controls/>
+                    </div>
+                </div>
+                <div class="registration-section">
+                    <h3 class="body-heading">New User!!! Register here <img src="arrow.gif" alt="Here"/></h3>
+                    <form>
+                        <div class="name-div">
+                            <input type="text" class="form-control" id="firstname" placeholder="First Name" title="First name is mandatory" required>
+                            <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
+                        </div><br/>
+                        <div class="registration-div">
+                            <input type="email" class="form-control" id="emailid" placeholder="Email Id" required>
+                        </div><br/>
+                        <div class="registration-div">
+                            <input type="tel" class="form-control" id="phone" pattern="^[0-9]*$" placeholder="Mobile Number">
+                        </div><br/>
+                        <div class="registration-div">
+                            &nbsp;Birthday
+                            <input type="date" class="form-control" id="dob" required>
+                        </div><br/>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Gender</div>
+                            <div class="panel-body">
+                                <label><input type="radio" name="gender" value="Male" id="m" checked/>Male</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label><input type="radio" name="gender" value="Female" id="f">Female</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label><input type="radio" name="gender" value="Transgender" id="tg">Transgender</label>
+                            </div>
+                        </div>
+                        <div class="registration-div">
+                            <input type="submit" Value="Register" class="form-control btn-primary" id="submit"><br/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <section>
+            <div class="content">
+                <div class="information-section">
+                    <div id="page-wrapper">
+		              <h3>Chat With Us...</h3>
+		              <ul id="messages"></ul>
+		              <form id="message-form" action="#" method="post">
+			             <textarea id="message" placeholder="Write your message here..." required></textarea>
+			             <button type="submit">Send Message</button>
+		              </form>
+	               </div>
+                </div>
+                <div class="external-links">
+                    <article>
+                        <h3 class="body-heading">References</h3> <br/>
+                        <ul>
+                            <li><a href="http://eloquentjavascript.net/00_intro.html" target="_blank">Introduction</a></li>
+                            <li><a href="http://eloquentjavascript.net/01_values.html" target="_blank">Values, Types, and Operators</a></li>
+                            <li><a href="http://eloquentjavascript.net/02_program_structure.html" target="_blank">Program Structure</a></li>
+                            <li><a href="http://eloquentjavascript.net/03_functions.html" target="_blank">Functions</a></li>
+                            <li><a href="http://eloquentjavascript.net/04_data.html" target="_blank">Data Structures: Objects and Arrays</a></li>
+                        </ul>
+                        <h3 class="body-heading">Audio Books</h3> <br/>
+                        <div>
+                        <audio controls>
+                            <source src="audioBook.flac" type="audio/flac">
+                            </audio>
+                            <a href="audioBook.flac" download>download</a>
+                        </div>
+                        
+                    </article>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-content">
+                
+                <div class="about-us-section">
+                    <div>
+                        About Us<br/><br/>
+                        <address>
+                            <div class="address">
+                                Selva Ajitha. J,<br/>
+                                Aspire Systems,<br/>
+                                ajitha.jacob@aspiresys.com
+                            </div>
+                        </address>
+                    </div>
+                </div>
+                <div style="font-size:50%;width:40%;">
+                    Help this smiley to reach home<br/>(Drag and drop the smiley into the white box)
+                </div>
+                <div class="about-us-img">
+                    <img src="smiley.gif" width="200px" draggable="true" ondragstart="drag(event)" id="img"/>
+                </div>
+                <div class="about-us-img" style="background-color:white" id="dragimg" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="chat.js"></script>
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text");
+            event.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</html>
